@@ -109,7 +109,8 @@ jQuery ->
 
       if @counter > 0 and @counter < 7
         $('#quotes').text(@quotes.at(@counter).get('text'))
-
+      if @counter == 7
+        $('p').remove()
 
     events: 'click button': 'addItem'
 
