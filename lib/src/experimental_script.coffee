@@ -9,11 +9,11 @@ $ ->
 
       class window.Quote extends Backbone.Model
           defaults:
-            quote: "for the docs?"
+            text: "for the docs?"
 
       class window.QuoteList extends Backbone.Collection
           model: Quote
-          url: "lib/quotes.json"
+          url: "lib/quotes/quotes.json"
 
       class window.ListView extends Backbone.View
 
@@ -29,7 +29,6 @@ $ ->
               @quotes = new QuoteList
               @quotes.fetch()
               @counter = 0
-              @counter.bind 'appendItem',
 
               @render() # here we're calling the render method in order to render the view
 
@@ -56,8 +55,7 @@ $ ->
 
           appendItem: (item) ->
               $('ul').append "<li>#{item.get 'part1'} #{item.get 'part2'}</li>"
-              console.log @counter
-              #$('#quotes').text(@quotes.at(@counter).get('quote'))
+              $('#quotes').text(@quotes.at(@counter).get('quote'))
           removeItem: ->
               $('li:last-child').remove()
               console.log($('li:last-child'))

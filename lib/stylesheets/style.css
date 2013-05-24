@@ -10,7 +10,7 @@ body {
   color: #444;
   padding: 25px 50px;
 }
-button, .delete, .swap {
+button, .delete, .swap, .save {
   border: 0;
   border-radius: 5px;
   color: #FFF;
@@ -20,7 +20,7 @@ button, .delete, .swap {
   text-align: center;
   text-transform: uppercase;
 }
-button:hover, .delete:hover, .swap:hover { opacity: 1; }
+button:hover, .delete:hover, .swap:hover, .save:hover { opacity: 1; }
 button {
   background: #2929FF;
   font-size: 0.75em;
@@ -40,7 +40,7 @@ span {
   margin-right: 10px;
 }
 ul { padding-left: 0; }
-.delete, .swap {
+.delete, .swap, .save {
   font-size: 0.625em;
   opacity: .25;
   padding: 3px 10px;
@@ -49,3 +49,4 @@ ul { padding-left: 0; }
 }
 .delete { background: #FF29D0; }
 .swap { background: #FF6529; }
+.save { background: #FF6540; }
